@@ -13,10 +13,10 @@ services:
       - fullcycle
 
   nodejs:
-    image: node:latest
+    build:
+      context: .
+      dockerfile: Dockerfile.node
     working_dir: /app
-    volumes:
-      - ./app:/app
     command: node app.js
     environment:
       NODE_ENV: production
