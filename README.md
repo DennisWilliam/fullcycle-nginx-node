@@ -5,25 +5,54 @@ Desafio de projeto docker para criar uma imagem utilizando Nginx e Node
 # COMANDOS
 
 - Build da Imagem com Dockerfile especifico:
-sudo docker build . -t fullcycle-node -f ./Dockerfile.node 
-sudo docker build . -t fullcycle-nginx -f ./Dockerfile.nginx
-sudo docker build . -t fullcycle-postgres -f ./Dockerfile.postgres
+```bash
+sudo docker build . -t fullcycle-node -f ./Dockerfile.node
+```
 
+```bash
+sudo docker build . -t fullcycle-nginx -f ./Dockerfile.nginx
+```
+
+```bash
+sudo docker build . -t fullcycle-postgres -f ./Dockerfile.postgres
+```
+ 
 - Criar uma network
+
+```bash
 docker network create fullcycle
+```
+
 
 - Executar container
-sudo docker run --name node --network fullcycle -d -p 3000:3000 fullcycle-node 
+
+```bash
+sudo docker run --name node --network fullcycle -d -p 3000:3000 fullcycle-node
+```
+
+```bash
 sudo docker run --name nginx --network fullcycle -d -p 8080:80 fullcycle-nginx
+```
+
+```bash
 sudo docker run --name postgres --network fullcycle -d -p 5432:5432 fullcycle-postgres
+```
 
 -Acessar base de dados
+
+```bash
 docker exec -it postgres bash
 psql -U pg -d database
+```
+
+```sql
 SELECT * FROM people;
+```
 
 -Exibir logs do container
+```bash
 docker logs <ID ou nome-do-container>
+```
 
 
 # DESAFIO
@@ -42,8 +71,6 @@ curl -X PUT -H "Content-Type: application/json" -d "{\"name\":\"SEU_NOME\"}" htt
 2 - Acessar a url pelo browser:
 
 ![Imagem com menos de 2MB](imagens/acesso.png)
-
-http://localhost:80/service
 
 ```json
 http://localhost:80/service
