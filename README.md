@@ -59,7 +59,14 @@ docker logs <ID ou nome-do-container>
 
 - Acessar o NodeJs pelo Nginx como proxy reverso passando um nome no body da requisição que será salvo na base de dados e retornado quando acessar pelo browser
 
-1 - Enviar a seguinte request com o método PUT e no body passar o atributo name:
+1 - Executar no terminar o comando do docker compose para subir os containers
+
+```bash
+docker compose up
+```
+
+
+2 - Enviar a seguinte request com o método PUT e no body passar o atributo name:
 
 ![Imagem com menos de 2MB](imagens/enviar_request.png)
 
@@ -68,7 +75,7 @@ curl -X PUT -H "Content-Type: application/json" -d "{\"name\":\"SEU_NOME\"}" htt
 ```
 
 
-2 - Acessar a url pelo browser:
+3 - Acessar a url pelo browser:
 
 ![Imagem com menos de 2MB](imagens/acesso.png)
 
@@ -76,7 +83,7 @@ curl -X PUT -H "Content-Type: application/json" -d "{\"name\":\"SEU_NOME\"}" htt
 http://localhost:80/service
 ```
 
-3 - Acesso via cURL:
+4 - Acesso via cURL:
 
 ```json
 curl -i http://localhost:80/service
