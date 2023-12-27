@@ -71,7 +71,7 @@ docker compose up
 ![Imagem com menos de 2MB](imagens/enviar_request.png)
 
 ```json
-curl -X PUT -H "Content-Type: application/json" -d "{\"name\":\"SEU_NOME\"}" http://localhost:80/service
+curl -X PUT -H "Content-Type: application/json" -d "{\"name\":\"SEU_NOME\"}" http://localhost:8080/service
 ```
 
 
@@ -80,11 +80,11 @@ curl -X PUT -H "Content-Type: application/json" -d "{\"name\":\"SEU_NOME\"}" htt
 ![Imagem com menos de 2MB](imagens/acesso.png)
 
 ```json
-http://localhost:80/service
+http://localhost:8080/service
 ```
 
 4 - Acesso via cURL:
 
 ```json
-curl -i http://localhost:80/service
+curl -i http://localhost:8080/service
 ```
