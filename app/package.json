@@ -1,0 +1,27 @@
+{
+  "name": "fullcycle-nginx-node",
+  "version": "1.0.0",
+  "description": "Desafio de projeto docker para criar uma imagem utilizando Nginx e Node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DennisWilliam/fullcycle-nginx-node.git"
+  },
+  "keywords": [],
+  "author": "dennisw.dev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DennisWilliam/fullcycle-nginx-node/issues"
+  },
+  "homepage": "https://github.com/DennisWilliam/fullcycle-nginx-node#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "pg": "^8.11.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
